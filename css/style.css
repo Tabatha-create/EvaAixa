@@ -1,0 +1,70 @@
+ 
+   body {
+      font-family: 'Comfortaa', cursive;
+            margin: 0;
+      background-color: #fdfcf9;
+      color: #5e5e5e;
+    }
+    header {
+      background-color: #c9b6e4;
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .bio img {
+      max-width: 150px;
+      border-radius: 50%;
+    }
+    .projects img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .services ul {
+      list-style: none;
+      padding: 0;
+    }
+    .services li {
+      background-color: #aee3d6;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 2rem 0;
+      background-color: #e3c88e;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #c9b6e4;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
