@@ -19,60 +19,71 @@ body {
 
 /* Header */
 header {
-        background: linear-gradient(45deg, #e1bee7 0%, #c084fc 100%);
-        color: white;
-        padding: 2rem 0;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(192, 132, 252, 0.3);
+    background: linear-gradient(45deg, #e1bee7 0%, #d7b6f9 85%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(192, 132, 252, 0.3);
     }
 
 .logo {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        position: relative;
-        display: inline-block;
-    }
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding: 12px; /* Marco sutil */
+    background: rgba(255, 255, 255, 0.08); /* Fondo translúcido muy sutil */
+    border-radius: 18px;
+    backdrop-filter: blur(8px); /* Efecto cristal suave */
+}
 
-        .logo::before {
-            content: "♡";
-            color: #ef4444;
-            font-size: 3rem;
-            position: absolute;
-            left: -4rem;
-            top: -0.5rem;
-        }
+.logo::before {
+    content: "♡";
+    color: rgba(239, 68, 68, 0.8); /* Más transparente */
+    font-size: 2.5rem; /* Tamaño ajustado */
+    position: absolute;
+    left: -3rem;
+    top: 0.5rem;
+}
 
-        .logo::after {
-            content: "✿";
-            color: #ec4899;
-            font-size: 2rem;
-            position: absolute;
-            right: -3rem;
-            top: -0.2rem;
-        }
+.logo::after {
+    content: "✿";
+    color: rgba(236, 72, 153, 0.8); /* Más transparente */
+    font-size: 1.8rem; /* Tamaño ajustado */
+    position: absolute;
+    right: -2.5rem;
+    top: 0.8rem;
+}
 
-        .logo img {
-            filter: brightness(1.1);
-            height: 250px;
-            border-radius: 25px;
-        }
+.logo img {
+    height: 200px; /* Tamaño equilibrado */
+    filter: brightness(1.2) contrast(1.05) saturate(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    border: 2px solid rgba(255, 255, 255, 0.25); /* Borde sutil */
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
 
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-style: italic;
-        }
+.logo img:hover {
+    transform: scale(1.03); /* Efecto hover sutil */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15); /* Sombra al hover */
+}
 
-        /* Navigation */
-        nav {
-            background: linear-gradient(45deg, #ef4444 0%, #f87171 100%);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+}
 
-        nav ul {
+/* Navigation */
+nav {
+    background: linear-gradient(45deg, #ef4444 0%, #f87171 100%);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
