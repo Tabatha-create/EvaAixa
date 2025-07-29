@@ -5,17 +5,21 @@
     }
 
 body {
-        font-family: 'Georgia', serif;
-        background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
-        color: #333;
-        line-height: 1.6;
-    }
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+    line-height: 1.6;
+}
 
 .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
+
+h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+}
 
 /* Header */
 header {
@@ -191,8 +195,9 @@ nav a:hover {
 }
 
 .project-card:hover {
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
 }
 
 .project-card h3 {
@@ -280,6 +285,7 @@ footer {
     position: absolute;
     opacity: 0.3;
     font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
 }
 
 .flower-left {
@@ -627,7 +633,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(45deg, #e1bee7 0%, #d7b6f9 85%);
     padding: 15px 8px;
     border-radius: 25px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -646,43 +652,19 @@ footer {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(45deg, #ef4444 0%, #ec4899 100%);  /* Color base uniforme */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #db2777;  /* Variante al hacer hover */
 }
 
 .social-btn svg {
     width: 20px;
     height: 20px;
     transition: all 0.3s ease;
-}
-
-/* Colores específicos para cada red social */
-.social-btn.facebook {
-    background: linear-gradient(45deg, #1877f2, #42a5f5);
-    color: white;
-}
-
-.social-btn.twitter {
-    background: linear-gradient(45deg, #1da1f2, #64b5f6);
-    color: white;
-}
-
-.social-btn.instagram {
-    background: linear-gradient(45deg, #e4405f, #fd79a8, #fdcb6e);
-    color: white;
-}
-
-.social-btn.linkedin {
-    background: linear-gradient(45deg, #0077b5, #00a0dc);
-    color: white;
-}
-
-.social-btn.youtube {
-    background: linear-gradient(45deg, #ff0000, #ff6b6b);
-    color: white;
-}
-
-.social-btn.github {
-    background: linear-gradient(45deg, #333, #666);
-    color: white;
 }
 
 /* Efectos hover */
@@ -723,8 +705,9 @@ footer {
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Tooltips */
