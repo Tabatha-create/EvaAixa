@@ -4,11 +4,22 @@
         box-sizing: border-box;
     }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden ;
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
     color: #333;
     background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+    background-attachment: fixed;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -112,6 +123,10 @@ nav a:hover {
 }
 
 /* Main sections */
+main {
+    flex: 1 0 auto;
+}
+
 .section {
     padding: 4rem 0;
     position: relative;
@@ -131,6 +146,26 @@ nav a:hover {
     color: #ec4899;
     font-size: 1.5rem;
     margin-top: 0.5rem;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 2rem auto;
+    background-color: rgba(239, 137, 185, 0.79);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0);}
+    50%  { transform: translateY(-8px);}
+    100% { transform: translateY(0);}
 }
 
 /* About section */
@@ -262,8 +297,9 @@ footer {
     color: white;
     background: linear-gradient(45deg, #1f2937 0%, #4b5563 100%);
     padding: 3rem 0;
-    margin-top: 4rem;
+    margin-top: 0;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .footer-content {
@@ -579,7 +615,7 @@ footer {
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, #e1bee7 0%, #d7b6f9 85%);
+    background: linear-gradient(45deg, #c084fc 0%, #ec4899 100%);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -767,3 +803,4 @@ footer {
         display: none;
     }
 }
+

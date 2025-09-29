@@ -1,59 +1,231 @@
  <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eva Aixa Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Personal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 
- <header>
-    <h1>Eva Aixa Studio</h1>
-    <p>Diseño sitios donde la imaginación toma forma</p>
-  </header>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="logos/otro2-2.png" alt="Mi logo personal">
+        </div>
+            <h2 class="subtitle">Donde la creatividad y la pasión se encuentran ✨</h2>
+    </div>
+</header>
 
-  <section class="bio">
-    <h2>Sobre mí</h2>
-    <p>Soy Eva Aixa, diseñadora digital y narradora interactiva. Desde páginas de cine hasta cuentos infantiles, fusiono diseño, emoción y narrativa para construir espacios digitales únicos.</p>
-  </section>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
 
-  <section class="projects">
-    <h2>Proyectos</h2>
-    <h3>Huellas de Tabatha</h3>
-    <p>Cuentos infantiles interactivos y actividades creativas.</p>
-    <img src="https://via.placeholder.com/600x300?text=Huellas+de+Tabatha" alt="Huellas de Tabatha" />
+<main>
+    <section id="inicio" class="section">
+        <div class="container">
+            <div class="welcome-message" style="text-align: center; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-left: 5px solid #ef4444;">
+                <p style="font-size: 1.3rem; color: #666; margin-bottom: 2rem;">
+                <h1 style="color: #ef4444; font-size: 2.5rem; margin-bottom: 1rem;">¡Bienvenido a mi mundo digital! 🌟</h1>
+                Un espacio donde convergen las historias, la creatividad y la pasión por crear experiencias únicas.</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <span style="font-size: 3rem; color: #ef4444;">♡</span>
+                    <span style="font-size: 3rem; color: #c084fc;">✿</span>
+                    <span style="font-size: 3rem; color: #ec4899;">♡</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h3>Archivo Cinematográfico</h3>
-    <p>Portal cultural sobre cine con enfoque visual y educativo.</p>
-    <img src="https://via.placeholder.com/600x300?text=Archivo+Cinematografico" alt="Archivo Cinematográfico" />
-  </section>
+    <section class="quote">
+        <p> “Las historias no se cuentan solo con palabras. A veces, se navegan.”
+            <span style="font-size: 2.5rem;">🧭</span>
+        </p>
 
-  <section class="services">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Diseño de sitios web narrativos</li>
-      <li>Experiencias interactivas para niños y docentes</li>
-      <li>Diseño visual para proyectos culturales</li>
-      <li>Consultoría creativa</li>
-    </ul>
-  </section>
+    </section>
 
-  <section class="quote">
-    <p>“Las historias no se cuentan solo con palabras. A veces, se navegan.”</p>
-  </section>
+    <section id="sobre-mi" class="section">
+        <div class="container">
+            <div class="decorative-element flower-left">🌸</div>
+            <h2 class="section-title">Sobre mí</h2>
+            <div class="about-content">
+                <div class="profile-image">
+                    <img src="img/pelorizado.jpg" alt="pelorizado" style="width: 20rem; height: 20rem; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 0 0 2px #e74c3c;">
+                </div>
+                <div class="about-text">
+                    <p>¡Hola! Soy una persona apasionada por la creatividad en todas sus formas. Desde contar historias que toquen el corazón hasta crear experiencias web únicas, mi misión es conectar con las personas a través de lo que más amo hacer.</p><br>
+                    <p>Mi mundo gira en torno a los cuentos, las historias, las celebraciones y el cine como patrimonio. Cada proyecto que desarrollo tiene una pizca de mi personalidad: alegre, colorida y llena de detalles que hacen la diferencia.</p><br>
+                    <p>Los ángeles, corazones y orquídeas no son solo símbolos para mí, son la esencia de cómo veo la vida: con protección, amor y belleza en cada detalle. 💕</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="contact">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre" required />
-      <input type="email" placeholder="Correo electrónico" required />
-      <textarea placeholder="Mensaje" rows="4" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
+    <section id="proyectos" class="section">
+        <div class="container">
+            <div class="decorative-element heart-decoration">♡</div>
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🎉 Piñatas Marife</h3>
+                    <p>El sitio web de mi hermana: piñatas personalizadas, también realiza adornos y lo que quieras para tu celebración. Diseños únicos para hacer de cada celebración un momento especial e inolvidable.</p>
+                        <a href="#" class="project-link">Ver piñatas</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎬 Cine como Patrimonio</h3>
+                    <p>Un proyecto que fusiona mi amor por el cine con la preservación, conservación y difusión del patrimonio. Análisis, reseñas y reflexiones sobre cómo el cine retrata la historia.</p>
+                        <a href="#" class="project-link">Descubrir más</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>🐾 Huellas de Tabatha</h3>
+                    <p>Una plataforma mágica e interactiva donde las historias cobran vida. Aquí comparto cuentos originales con ilustraciones y animaciones que transportan a los lectores a mundos fantásticos.</p>
+                        <a href="huellas-tabatha/index.html" class="project-link">Explorar cuentos</a>
+                </div>    
+                    
+                <div class="project-card">
+                    <h3> Primos</h3>
+                    <p>Un proyecto sobre mi familia paterna, donde muchos de los primos tienen potencialidades e imaginación artística, recordando un poco de dónde venimos y cómo crecimos con ese amor fraterno a pesar del tiempo, los años y la distancia, y mostrando lo que hacen.</p>
+                        <a href="Primos/index.html" class="project-link">Descubrir más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="decorative-element flower-right">✿</div>
+            <h2 class="section-title">Últimas reflexiones</h2>
+            <div class="blog-preview">
+                <div class="blog-post">
+                    <p class="blog-date">14 de julio, 2025</p>
+                    <h3>Mi viaje en el desarrollo web</h3>
+                    <p>Comencé en este mundo de la creación de páginas web a través de un curso de "Herramientas Web 2.0" y después con otro de "Desarrollo de Aplicaciones con tecnologías Web". <br> El primer curso me inició en el mundo de la IA y empecé a crear con herramientas desconocidas por mí, hasta el momento. Después, con el siguiente curso, creí que no podría terminarlo por la cantidad de conceptos y de desafíos que tenía que enfrentar cada día. <br> Después le fui agarrando el gusto y, aunque con muchos fallos, me pusé a investigar y a crear mi mundo de páginas web donde siempre tengo algo nuevo que agregar. <br> No es fácil, pues la creatividad está en todas partes y la competencia en este campo cada día es mayor, hay mucha gente con sólidos conocimientos e ideas pero ahí voy, dando un paso a la vez y creando e imaginando nuevos mundos.</p>
+                </div>
+                <div class="blog-post">
+                    <p class="blog-date"></p>
+                    <h3>La importancia de los detalles visuales</h3>
+                    <p>¿Por qué creo que los pequeños detalles como colores, símbolos y animaciones hacen la diferencia en cualquier proyecto? <br> Muchas veces, con imágenes podemos ver lo que con palabras no comprendemos. <br> Con ayuda de la inteligencia artificial IA he creado un mundo de imágenes para mis cuentos y, es ahí donde desarrollo aún más la creatividad para tratar de darle forma a aquello que con palabras no es fácil de explicar. <br> Se dice que, en algunas ocasiones, "una imagen dice más que mil palabras", y aunque yo soy persona de muchas palabras pues me gusta escribir, también me gusta expresar mis ideas con imágenes.</p>
+                </div>
+                <div class="blog-post">
+                    <p class="blog-fecha"></p>
+                    <h3>Creatividad y tecnología de la mano</h3>
+                    <p>¿Cómo he logrado combinar mi pasión por la creatividad con las herramientas tecnológicas para crear experiencias únicas? <br> Siempre estoy creando en mi mente, así que encontré la manera de sacar un poco de todo aquello que maquino en mi cabeza a través de lo que voy haciendo cada día sentada frente a una computadora. <br> Me gusta la investigación documental, así que me pongo a averiguar nuevas formas de crear las cosas y de transmitir las ideas que me vienen y lo que quiero transmitir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Conectemos</h2>
+            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; border-left: 5px solid #c084fc;">
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+                    Si tienes alguna pregunta, proyecto en mente o simplemente quieres saludar, ¡estaré encantada de conocerte!
+                </p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <!-- Formulario desplegable -->
+                    <div class="contact-dropdown">
+                        <button class="contact-trigger">
+                            Enviar mensaje ✿
+                        </button>
+                    
+                    <div class="dropdown-form">
+                        <div class="form-container">
+                            <h3 class="form-title">Envíame un mensaje ♡</h3>
+                            <form class="contact-form" id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" id="subject" name="subject" required>
+                                    <label for="subject">Asunto</label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                                
+                                <button type="submit" class="form-submit">Enviar ♡</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="social-sidebar">
+    <div class="social-buttons">
+        <a href="https://facebook.com/aixaeva" target="_blank" class="social-btn facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        
+        <a href="https://twitter.com/evaaixa" target="_blank" class="social-btn twitter" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </a>
+        
+        <a href="https://instagram.com/aixaeva" target="_blank" class="social-btn instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+        </a>
+        
+        <a href="https://linkedin.com/in/evaaixa" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+        </a>
+        
+        <a href="https://youtube.com/@evaaixa" target="_blank" class="social-btn youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
+                <polygon points="9.545,15.568 15.818,12 9.545,8.432" fill="#ef4444"/>
+            </svg>
+        </a>
+    </div>
+    
+    <div class="social-decoration">✿</div>  
+    
+</div>
+</main>
+
+<button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba"></button>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <span class="footer-symbol">♡</span>
+            <p>© 2025 Eva Aixa: Blog Personal.</p>
+            <span class="footer-symbol">🌸</span>
+        </div>
+    </div>
+</footer>
+
+<script src="js/blog.js"></script>
 </body>
-  <script src="js/js.js"></script>
-
 </html>
