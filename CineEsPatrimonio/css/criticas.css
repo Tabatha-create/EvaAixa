@@ -1,0 +1,293 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+p {
+    line-height: 1.5;
+}
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+.falling-element{
+    position: absolute;
+    font-size: 3rem;
+    top: -50px;
+    animation: fall 3s linear infinite;
+}
+@keyframes fall{
+    0% { transform: translateY(-50px);}
+    100% { transform: translateY(250px);}
+}
+.element1 { left: 15%; animation-delay: 1s;}
+.element2 { left: 35%; animation-delay: 0.5s;}
+.element3 { left: 50%; animation-delay: 1s;}
+.element4 { left: 65%; animation-delay: 0.5s;}
+.element5 { left: 80%; animation-delay: 1s;}
+
+.banner {    
+    position: relative;
+    background-image: url("../imagenes_ia/Entrada2.jpg"); 
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: cinzel, serif;
+}
+@keyframes wave {
+    0%, 100% { transform: translateX(0) translateY(0);}
+    25% { transform: translateX(25%) translateY(-20px);}
+    50% { transform: translateX(50%) translateY(0);}
+    75% { transform: translateX(75%) translateY(20px);}
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    padding: 35px;
+}
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes_ia/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.3;
+    z-index: -1;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* barra para los enlaces a las redes sociales */
+.sidebar {
+    position: fixed;
+    top: 40%;
+    right: 5px;
+    background-color: #2C3E50;
+    padding: 3px;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+  .social-icons {
+    list-style: none;
+    padding: 0;
+}
+  .social-icons li {
+    margin-bottom: 10px;
+}
+  .social-icons a {
+    color: #aee2d9;
+    font-size: 24px;
+}
+/* Ajustes para el desplegable de las críticas y créditos de las mejores películas */
+.reviews {
+    margin: 20px 0;
+}
+.review {
+    background-color: "";
+    border: 1px solid #0a1d2f;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+.review h2 {
+    margin-top: 0;
+}
+#contenido.reviews {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.galeria-fotos .poster {
+    width: 75%;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fotos-adicionales {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.foto-adicional {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.foto-adicional:hover {
+    transform: scale(1.1);
+}
+.enlaces-externos {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.boton-enlace {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2C3E50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.boton-enlace:hover {
+    background-color: #b862b8;
+}
+
+/* estilos para los formularios */
+#formularios {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+    padding-bottom: 100px;
+}
+form {
+    background-color: rgb(89, 89, 175);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 3px;
+    color: white;
+    font-size: 0.9em;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+input[type="submit"],
+button[type="submit"] {
+    background-color: #2C3E50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    align-self: center;
+    width: 60%;
+    margin-top: 10px;
+}
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #b862b8;
+}
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    #formularios {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 120px;
+    }
+    form {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    input[type="submit"],
+    button[type="submit"]{
+        width: 80%;
+    }
+}
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+footer img {
+    border-radius: 50%; /* Bordes redondeados */
+    transition: transform 0.5s ease; /* Transición suave */
+}
+footer img:hover {
+    transform: scale(1.5); /* Aumenta el tamaño al pasar el ratón */
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.scroll-to-top:hover {
+    background-color: #b8860b;
+    transform: translateY(-2px);
+}
+.scroll-to-top.visible {
+    display: flex;
+}

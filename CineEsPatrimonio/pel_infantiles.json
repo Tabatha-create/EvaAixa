@@ -1,0 +1,14 @@
+[
+    {
+        "titulo": "El Patito Feo",
+        "descripcion": "Una película divertida y educativa para los más pequeños.",
+        "enlace": "pelicula_infantil.html",
+        "imagen": "imagenes/patito_feo.jpg"
+    },
+    {
+        "titulo": "Otra Película",
+        "descripcion": "Otra película interesante para los niños.",
+        "enlace": "otra_pelicula.html",
+        "imagen": "imagenes/otra_pelicula.jpg"
+    }
+]

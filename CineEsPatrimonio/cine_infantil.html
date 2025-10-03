@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Infantil</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/infantil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header> 
+        <div class="banner">
+            <h1 class="title-banner">Cine Infantil</h1>
+        </div>
+        <div class="falling-element element1">🎥</div>
+        <div class="falling-element element2">🎬</div>
+        <div class="falling-element element3">🎞️</div>
+        <div class="falling-element element4">📹</div>
+        <div class="falling-element element5">📽</div>
+        <nav> 
+            <ul> 
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="criticas.html">Críticas</a></li> 
+                <li><a href="#formularios">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    <main>
+
+    <section class="section_infantil">
+        <h2 class="cine_infantil">Sección Infantil</h2>
+        <div class="contenido-infantil">
+            <div class="item">
+                <img src="imagenes_ia/img_infantil.png" alt="">
+                <h3>Explora y diviértete</h3>
+                <p>Descubre más sobre cine y patrimonio con nuestras actividades. 
+                    <a href="cine_infantil.html" class="enlace-cineInfantil" target="_blank">Visita nuestra página de Cine para niños</a>
+                </p>
+            </div>
+            <div class="item">                
+                <img src="imagenes_ia/cine_infantil.png" alt="">
+                <h3>Películas Clásicas</h3>
+                <p>Cine de siempre para los más pequeños</p>
+                <a href="">Ver películas</a>
+            </div>
+            <div class="item">                
+                <a href="https://youtu.be/JW4RQscuPGk" target="_blank">
+                    <img src="imagenes_ia/patitoFeo.jpg" alt="El Patito Feo">
+                </a>
+                <h3>Película Infantil destacada</h3>
+                <h3>El Patito Feo</h3>
+                <p>Una película divertida con un bonito mensaje</p>
+            </div>
+            <div class="item">
+                <img src="imagenes_ia/juegos_inf.png" alt="Juegos Educativos">
+                <h3>Juegos Educativos</h3>
+                <p>Diviértete y aprende con nuestros juegos interactivos.</p>
+                <a href="https://es.educaplay.com" target="_blank">Jugar ahora</a>
+            </div>
+            <div class="item">
+                <img src="imagenes_ia/manualid_cine.png" alt="Manualidades">
+                <h3>Manualidades</h3>
+                <p>Ideas creativas para hacer manualidades relacionadas con el cine.</p>
+                <a href="https://tallertelekids.com/recurso-gratis-tutorial-manualidades-de-cine-plantillas-incluidas/" target="_blank">Crear</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <form id="contactForm" action="contacto.php" method="POST"> 
+            <h3>Contacto</h3> 
+            <label for="nombreContacto">Nombre:</label> 
+            <input type="text" id="nombreContacto" name="nombreContacto" required> 
+            <label for="telefonoContacto">Teléfono:</label> 
+            <input type="tel" id="telContacto" name="telContacto" required> 
+            <label for="emailContacto">Email:</label> 
+            <input type="email" id="emailContacto" name="emailContacto" required> 
+            <label for="mensajeContacto">Mensaje:</label> 
+            <textarea id="mensajeContacto" name="mensajeContacto" required></textarea> 
+            <button type="submit">Enviar</button> </form>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cine como Patrimonio. Todos los derechos reservados.</p>
+        <img src="favicon.ico" alt="Logo">
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Críticas Cinematográficas</title>
+    <link rel="stylesheet" href="css/criticas.css">
+    <!-- <link rel="stylesheet" href="css/pruebas.css"> -->
+</head>
+<body>
+    <header> 
+        <div class="banner">
+            <h1 class="title-banner">Un poco más de Cine</h1>
+        </div>
+        <div class="falling-element element1">🎥</div>
+        <div class="falling-element element2">🎬</div>
+        <div class="falling-element element3">🎞️</div>
+        <div class="falling-element element4">📹</div>
+        <div class="falling-element element5">📽</div>
+        <nav> 
+            <ul> 
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="criticas.html">Críticas</a></li> 
+                <li><a href="#formularios">Contacto</a></li>
+                <li><a href="blog.html">Blog</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+    <main> 
+        <div class="sidebar">
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/tupagina" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com/tupagina" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/tupagina" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/tupagina" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <section id="contenido" class="reviews">
+            <div class="galeria-fotos">
+                <img id="foto" alt="Foto de la Película" class="poster">
+                <div class="fotos-adicionales" id="fotos-adicionales">
+                    <!-- Espacio donde se insertarán las fotos adicionales dinámicamente -->
+                </div>
+            </div>
+            <article class="review">
+                    <h2 id="titulo">${data.title}</h2> 
+                    <p id="director"><strong>Director:</strong></p> 
+                    <p id="genero"><strong>Género:</strong></p> 
+                    <p id="duracion"><strong>Duración:</strong></p> 
+                    <p id="resumen"><strong>Resumen:</strong></p> 
+                    <p id="analisis"><strong>Análisis:</strong></p> 
+                    <p id="opinion"><strong>Opinión Personal:</strong></p>
+                    <p id="enlace"></p>
+                <div class="enlaces-externos">
+                    <a id="leer-mas" href="#" target="_blank" class="boton-enlace">Leer más sobre esta película</a>
+                    <a id="imdb-link" href="#" target="_blank" class="boton-enlace">Ver en IMDB</a>
+                </div>
+            </article> 
+            <iframe id="trailer" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h3>Datos técnicos</h3>
+            <ul>
+                <li><strong>Duración:</strong> 175 minutos</li>
+                <li><strong>Presupuesto:</strong> $6.000.000</li>
+                <li><strong>Recaudación:</strong> $245.066.411</li>
+            </ul>
+        </section>
+
+        <h3>Opiniones de los Usuarios</h3>
+        <div id="comentarios">
+            <!-- Sección de comentarios -->
+        </div>
+        <section id="formularios">
+            <form id="comentario-form">
+                <h3>Comentarios</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" required></textarea>
+                <button type="submit">Enviar Comentario</button>
+            </form>
+            
+            <form id="contactForm">
+                <h3>Contacto</h3>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="tel" name="tel" required>                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+            
+        <section>
+            <p>Comparte esta crítica:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://tu_pagina.com/critica.html" target="_blank">Compartir en Facebook</a> 
+            <a href="https://twitter.com/intent/tweet?url=https://tu_pagina.com/critica.html&text=Check%20out%20this%20movie%20review!" target="_blank">Compartir en Twitter</a>
+        </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </main> 
+    
+    
+    
+    
+    
+    
+    <footer> 
+        <p>&copy; 2024 Cine como Patrimonio. Todos los derechos reservados.</p>
+        <img src="favicon.ico" alt="Logo">
+    </footer>
+    <script src="js/criticas.js"></script>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+</body>
+</html>

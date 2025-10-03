@@ -1,0 +1,55 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to bottom, #704214, #d2b48c); /* Degradado sepia a marrón claro */
+    color: whitesmoke; /* Texto blanco */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.falling-element{
+    position: absolute;
+    font-size: 3rem;
+    top: -50px;
+    animation: fall 3s linear infinite;
+}
+@keyframes fall{
+    0% { transform: translateY(-50px);}
+    100% { transform: translateY(250px);}
+}
+.element1 { left: 15%; animation-delay: 1s;}
+.element2 { left: 35%; animation-delay: 0.5s;}
+.element3 { left: 50%; animation-delay: 1s;}
+.element4 { left: 65%; animation-delay: 0.5s;}
+.element5 { left: 80%; animation-delay: 1s;}
+
+.banner {    
+    position: relative;
+    background-image: url("../imgInfantil/fondo1.jpg"); 
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: cinzel, serif;
+    padding: 20px;
+}
+@keyframes wave {
+    0%, 100% { transform: translateX(0) translateY(0);}
+    25% { transform: translateX(25%) translateY(-20px);}
+    50% { transform: translateX(50%) translateY(0);}
+    75% { transform: translateX(75%) translateY(20px);}
+}
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 10px;
+    }
+    .tittle {
+        font-size: 1.5rem;
+    }
+}

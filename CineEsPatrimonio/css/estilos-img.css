@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --bg-color: #f8f9fa;
+    --card-bg-color: #fff;
+    --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 2rem auto;
+  }
+
+  .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  .film-card {
+    background-color: var(--card-bg-color);
+    border-radius: 0.5rem;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .film-card h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .film-card p {
+    margin-bottom: 0;
+  }
