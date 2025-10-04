@@ -1,0 +1,453 @@
+ :root {
+  --azul-profundo: #003366;
+  --azul-medio: #005B96;
+  --celeste: #00AEEF;
+  --agua-clara: #B3E5FC;
+  --turquesa-suave: #00B8D4;
+  --azul-claro-brillante: #E0F7FA;
+  --blanco: #FFFFFF;
+  --gris-marino: #2E3D49;
+}
+
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--gris-marino);
+  background-color: var(--agua-clara);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* HEADER CON EFECTO MAR CON LUZ */
+header {
+  background: linear-gradient(
+    to bottom,
+    var(--azul-claro-brillante),
+    var(--agua-clara),
+    var(--turquesa-suave),
+    var(--celeste)
+  );
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: block;
+  max-width: 350px;
+  margin: auto;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+  border-radius: 25px;
+}
+
+.logo:hover {
+  animation: logoFloat 5s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+.logo-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+header h1 {
+  color: var(--azul-profundo);
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* NAVEGACIÓN */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 3rem 0 0 0;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0 1.5rem;
+}
+
+nav ul li a {
+  color: var(--azul-profundo);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--celeste);
+  color: var(--blanco);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+  background-color: var(--blanco);
+  text-align: center;
+}
+
+.contenido-hero {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+}
+
+.hero h2 {
+  color: var(--azul-medio);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--gris-marino);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero img {
+  flex: 1;
+  min-width: 300px;
+  max-height: 400px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* GALERÍA */
+.galeria {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--agua-clara);
+}
+
+.galeria h3 {
+  color: var(--azul-profundo);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.galeria h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--celeste);
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.producto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.producto-container h4 {
+  color: var(--azul-medio);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.producto {
+  width: 100%;
+  background-color: var(--blanco);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 3px solid var(--celeste);
+  background-color: white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.producto img:hover {
+  transform: scale(2.5);
+  position: relative;
+  z-index: 10;
+}
+
+.producto p {
+  color: var(--celeste);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.btn-ver-mas {
+  display: inline-block;
+  background: var(--celeste);
+  color: var(--blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mas:hover {
+  background: var(--azul-medio);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto:hover .btn-ver-mas {
+  background: var(--azul-profundo);
+}
+
+.sobre-mi-contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.foto-sobre-mi {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.sobre-mi-contenido p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Versión móvil: imagen arriba, texto abajo */
+@media (max-width: 600px) {
+  .sobre-mi-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-contenido p {
+    font-size: 0.95rem;
+  }
+}
+
+/* FORMULARIO DE CONTACTO */
+.contacto {
+  background-color: var(--celeste);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contacto h3 {
+  color: var(--blanco);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto label {
+  color: var(--azul-medio);
+  font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--agua-clara);
+  border-radius: 5px;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+  outline: none;
+  border-color: var(--turquesa-suave);
+  box-shadow: 0 0 5px rgba(0, 184, 212, 0.5);
+}
+
+.contacto button {
+  margin-top: 1rem;
+}
+
+/* BOTONES GENERALES */
+.boton {
+  display: inline-block;
+  background-color: var(--celeste);
+  color: var(--blanco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--azul-medio);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* PIE DE PÁGINA */
+footer {
+  background-color: var(--azul-profundo);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contenido-hero {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .producto {
+    min-width: 100%;
+  }
+}
+
+#btnUp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 24px;
+  background-color: var(--turquesa-suave); /* o el color que uses */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* oculto inicialmente */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#btnUp:hover {
+  background-color: #333; /* color al pasar el mouse */
+}
+
+#btnHome {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#btnHome img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#btnHome:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}

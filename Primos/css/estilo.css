@@ -1,0 +1,315 @@
+:root {
+  --sepia-oscuro: #654321;       /* marrón chocolate vintage */
+  --sepia-medio: #8B6914;        /* dorado envejecido */
+  --sepia-claro: #D2B48C;        /* tan cálido */
+  --sepia-muy-claro: #F5DEB3;    /* trigo suave */
+  --crema-vintage: #FDF5E6;      /* crema antigua */
+  --marron-cafe: #8B4513;        /* café tostado */
+}
+
+/* ================
+   Reset básico
+================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--crema-vintage);
+  color: var(--sepia-oscuro);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ====================
+   Cabecera común con fondo sepia
+==================== */
+header.cabecera-comun {
+  position: relative;
+  height: 40vh;
+  min-height: 500px;
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Imagen principal central */
+header.cabecera-comun::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/laCalera-1955.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: sepia(100%) contrast(1.2) brightness(1.1) saturate(0.8);
+  z-index: 1;
+}
+
+/* Degradado sepia vintage */
+header.cabecera-comun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(101, 67, 33, 0.5) 0%,    /* Sepia oscuro */
+    rgba(139, 105, 20, 0.4) 30%,  /* Sepia medio */
+    rgba(210, 180, 140, 0.3) 70%, /* Sepia claro */
+    rgba(245, 222, 179, 0.3) 100% /* Sepia muy claro */
+  );
+  z-index: 2;
+}
+
+/* Imágenes decorativas pequeñas */
+header.cabecera-comun .imagen-decorativa {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  filter: sepia(100%) contrast(1.2) brightness(1.1) saturate(0.8);
+  opacity: 0.7;
+  z-index: 3;
+  border: 2px solid rgba(245, 222, 179, 0.6);
+  box-shadow: 0 4px 12px rgba(101, 67, 33, 0.4);
+}
+
+/* Posiciones de las imágenes decorativas */
+header.cabecera-comun .imagen-decorativa.top-left {
+  top: 10%;
+  left: 8%;
+  background-image: url("../img/imagen1.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.top-right {
+  top: 10%;
+  right: 8%;
+  background-image: url("../img/imagen2.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.bottom-left {
+  bottom: 10%;
+  left: 8%;
+  background-image: url("../img/imagen3.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.bottom-right {
+  bottom: 10%;
+  right: 8%;
+  background-image: url("../img/imagen4.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.middle-left {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-image: url("../img/imagen5.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.middle-right {
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-image: url("../img/imagen6.jpg");
+}
+
+/* Efectos hover para las imágenes decorativas */
+header.cabecera-comun .imagen-decorativa:hover {
+  opacity: 0.95;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  border-color: rgba(245, 222, 179, 0.9);
+  box-shadow: 0 6px 16px rgba(101, 67, 33, 0.6);
+}
+
+/* Contenido del header por encima de todo */
+header.cabecera-comun .header-content {
+  position: relative;
+  z-index: 4;
+  padding: 1rem 2rem;
+}
+
+header.cabecera-comun img.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--crema-vintage);
+  background-color: rgba(245, 222, 179, 0.85);
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(101, 67, 33, 0.4);
+  filter: sepia(20%);
+}
+
+header.cabecera-comun h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--crema-vintage);
+  text-shadow: 2px 2px 4px rgba(101, 67, 33, 0.8);
+}
+
+header.cabecera-comun p {
+  font-size: 1.3rem;
+  color: var(--crema-vintage);
+  text-shadow: 1px 1px 3px rgba(101, 67, 33, 0.7);
+}
+
+/* ===================
+   Navegación
+=================== */
+nav {
+  background: linear-gradient(135deg, var(--sepia-medio), var(--marron-cafe));
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 8px rgba(101, 67, 33, 0.3);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--crema-vintage);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: var(--sepia-muy-claro);
+  background-color: rgba(245, 222, 179, 0.2);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   Contenido principal
+===================== */
+main {
+  padding: 2rem 1rem;
+  background-color: var(--crema-vintage);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.tarjeta {
+  background: linear-gradient(145deg, var(--sepia-muy-claro), var(--crema-vintage));
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 
+    4px 4px 12px rgba(101, 67, 33, 0.2),
+    inset 1px 1px 3px rgba(245, 222, 179, 0.8);
+  max-width: 500px;
+  margin: 1.5rem auto;
+  border: 1px solid var(--sepia-claro);
+}
+
+.tarjeta h2 {
+  color: var(--sepia-oscuro);
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.tarjeta p {
+  color: var(--marron-cafe);
+}
+
+/* ====================
+   Galería de imágenes
+==================== */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.galeria img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 
+    4px 4px 12px rgba(101, 67, 33, 0.3),
+    2px 2px 6px rgba(139, 105, 20, 0.2);
+  transition: all 0.3s ease;
+  filter: sepia(30%) contrast(1.1) brightness(1.05);
+  border: 2px solid var(--sepia-claro);
+}
+
+.galeria img:hover {
+  transform: scale(1.05) rotate(1deg);
+  filter: sepia(10%) contrast(1.2) brightness(1.1);
+  box-shadow: 
+    6px 6px 16px rgba(101, 67, 33, 0.4),
+    3px 3px 8px rgba(139, 105, 20, 0.3);
+}
+
+/* ====================
+   Pie de página
+==================== */
+footer {
+  background: linear-gradient(135deg, var(--sepia-oscuro), var(--marron-cafe));
+  color: var(--crema-vintage);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  box-shadow: 0 -4px 12px rgba(101, 67, 33, 0.3);
+}
+
+/* ====================
+   Efectos adicionales vintage
+==================== */
+h1, h2, h3 {
+  color: var(--sepia-oscuro);
+  font-family: 'Georgia', serif;
+}
+
+/* Efecto papel envejecido en el body */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 105, 20, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(101, 67, 33, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Botones con estilo vintage */
+button, .boton {
+  background: linear-gradient(145deg, var(--sepia-claro), var(--sepia-medio));
+  color: var(--sepia-oscuro);
+  border: 2px solid var(--marron-cafe);
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 8px rgba(101, 67, 33, 0.3);
+}
+
+button:hover, .boton:hover {
+  background: linear-gradient(145deg, var(--sepia-medio), var(--sepia-claro));
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 12px rgba(101, 67, 33, 0.4);
+}

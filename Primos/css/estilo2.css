@@ -1,0 +1,448 @@
+ :root {
+  /* 🏺 PALETA TERRACOTA Y CORAL VINTAGE - Calidez mediterránea y energías positivas */
+  
+  /* Terracotas principales */
+  --terracota-profundo: #A0522D;    /* siena tostada rica */
+  --terracota-medio: #CD853F;       /* terracota clásica equilibrada */
+  --terracota-claro: #D2B48C;       /* terracota suave y luminosa */
+  --terracota-rosado: #BC8F8F;      /* terracota con tinte rosado */
+  
+  /* Corales vibrantes pero vintage */
+  --coral-intenso: #FF7F50;         /* coral vibrante principal */
+  --coral-suave: #FFA07A;           /* salmón coral cálido */
+  --coral-empolvado: #F0A07A;       /* coral desaturado vintage */
+  --coral-rosado: #E9967A;          /* coral con tinte rosado */
+  
+  /* Complementarios cálidos */
+  --rosa-arcilla: #DEB887;          /* rosa arcilla natural */
+  --melocoton-vintage: #FFDAB9;     /* melocotón suave vintage */
+  --salmon-desaturado: #FA8072;     /* salmón elegante */
+  
+  /* Neutros cálidos mediterráneos */
+  --crema-calida: #FFF8DC;          /* crema con calidez */
+  --blanco-arena: #FAF0E6;          /* blanco como arena fina */
+  --beige-piedra: #F5DEB3;          /* beige piedra mediterránea */
+  --marron-chocolate: #8B4513;      /* chocolate para contraste */
+  
+  /* Acentos especiales */
+  --dorado-bronceado: #B8860B;      /* toque dorado muy sutil */
+  --malva-suave: #DDA0DD;           /* malva como acento fresco */
+}
+
+/* ================
+   Reset básico
+================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, 
+    var(--blanco-arena), 
+    var(--crema-calida), 
+    rgba(250, 218, 185, 0.3)
+  );
+  color: var(--marron-chocolate);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Textura mediterránea sutil */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 75%, rgba(160, 82, 45, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(255, 127, 80, 0.03) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(205, 133, 63, 0.02) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(240, 160, 122, 0.02) 25%, transparent 25%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ====================
+   Cabecera con ambiente mediterráneo
+==================== */
+header.cabecera-comun {
+  position: relative;
+  height: 40vh;
+  min-height: 500px;
+  max-height: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Imagen principal con filtro cálido mediterráneo */
+header.cabecera-comun::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/laCalera-1955.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: sepia(60%) contrast(1.1) brightness(1.1) saturate(1.2) hue-rotate(-10deg);
+  z-index: 1;
+}
+
+/* Degradado terracota y coral cálido */
+header.cabecera-comun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(160, 82, 45, 0.7) 0%,      /* Terracota profundo */
+    rgba(255, 127, 80, 0.5) 30%,    /* Coral intenso */
+    rgba(205, 133, 63, 0.4) 60%,    /* Terracota medio */
+    rgba(240, 160, 122, 0.3) 100%   /* Coral empolvado */
+  );
+  z-index: 2;
+}
+
+/* Imágenes decorativas con bordes coral */
+header.cabecera-comun .imagen-decorativa {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  filter: sepia(50%) contrast(1.1) brightness(1.1) saturate(1.1) hue-rotate(-5deg);
+  opacity: 0.85;
+  z-index: 3;
+  border: 3px solid var(--coral-suave);
+  box-shadow: 
+    0 4px 12px rgba(160, 82, 45, 0.3),
+    inset 0 2px 4px rgba(255, 248, 220, 0.4);
+}
+
+/* Posiciones de las imágenes decorativas */
+header.cabecera-comun .imagen-decorativa.top-left {
+  top: 10%;
+  left: 8%;
+  background-image: url("../img/imagen1.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.top-right {
+  top: 10%;
+  right: 8%;
+  background-image: url("../img/imagen2.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.bottom-left {
+  bottom: 10%;
+  left: 8%;
+  background-image: url("../img/imagen3.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.bottom-right {
+  bottom: 10%;
+  right: 8%;
+  background-image: url("../img/imagen4.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.middle-left {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  background-image: url("../img/imagen5.jpg");
+}
+
+header.cabecera-comun .imagen-decorativa.middle-right {
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  background-image: url("../img/imagen6.jpg");
+}
+
+/* Efectos hover cálidos y acogedores */
+header.cabecera-comun .imagen-decorativa:hover {
+  opacity: 0.95;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  border-color: var(--coral-intenso);
+  box-shadow: 
+    0 6px 20px rgba(160, 82, 45, 0.4),
+    0 0 15px rgba(255, 127, 80, 0.3);
+  filter: sepia(40%) contrast(1.15) brightness(1.15) saturate(1.2);
+}
+
+/* Contenido del header */
+header.cabecera-comun .header-content {
+  position: relative;
+  z-index: 4;
+  padding: 1rem 2rem;
+}
+
+header.cabecera-comun img.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--coral-suave);
+  background-color: rgba(250, 240, 230, 0.95);
+  margin-bottom: 1rem;
+  box-shadow: 
+    0 0 15px rgba(160, 82, 45, 0.4),
+    inset 0 2px 5px rgba(255, 255, 255, 0.3);
+  filter: none;
+}
+
+header.cabecera-comun h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--blanco-arena);
+  text-shadow: 
+    2px 2px 4px rgba(139, 69, 19, 0.8),
+    0 0 10px rgba(160, 82, 45, 0.4);
+}
+
+header.cabecera-comun p {
+  font-size: 1.3rem;
+  color: var(--crema-calida);
+  text-shadow: 1px 1px 3px rgba(139, 69, 19, 0.7);
+}
+
+/* ===================
+   Navegación terracota elegante
+=================== */
+nav {
+  background: linear-gradient(135deg, 
+    var(--terracota-profundo), 
+    var(--coral-intenso), 
+    var(--terracota-medio)
+  );
+  padding: 0.75rem 0;
+  box-shadow: 
+    0 4px 12px rgba(160, 82, 45, 0.25),
+    inset 0 1px 2px rgba(250, 240, 230, 0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--blanco-arena);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--melocoton-vintage);
+  background: linear-gradient(145deg, 
+    rgba(250, 240, 230, 0.15), 
+    rgba(255, 160, 122, 0.1)
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(160, 82, 45, 0.2);
+}
+
+/* =====================
+   Contenido principal mediterráneo
+===================== */
+main {
+  padding: 2rem 1rem;
+  background: transparent;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.tarjeta {
+  background: linear-gradient(145deg, 
+    var(--blanco-arena), 
+    var(--crema-calida), 
+    rgba(222, 184, 135, 0.2)
+  );
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 
+    6px 6px 20px rgba(160, 82, 45, 0.15),
+    -2px -2px 10px rgba(255, 255, 255, 0.7),
+    inset 1px 1px 3px rgba(255, 160, 122, 0.1);
+  max-width: 500px;
+  margin: 1.5rem auto;
+  border: 2px solid var(--terracota-claro);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Brillo cálido mediterráneo en las tarjetas */
+.tarjeta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 127, 80, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tarjeta h2 {
+  color: var(--terracota-profundo);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(160, 82, 45, 0.1);
+}
+
+.tarjeta p {
+  color: var(--marron-chocolate);
+  position: relative;
+  z-index: 1;
+}
+
+/* ====================
+   Galería con calidez mediterránea
+==================== */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.galeria img {
+  width: 220px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 
+    6px 6px 20px rgba(160, 82, 45, 0.18),
+    3px 3px 10px rgba(205, 133, 63, 0.12);
+  transition: all 0.4s ease;
+  filter: sepia(30%) contrast(1.08) brightness(1.1) saturate(1.15) hue-rotate(-8deg);
+  border: 3px solid var(--terracota-claro);
+}
+
+.galeria img:hover {
+  transform: scale(1.06) rotate(1.5deg);
+  filter: sepia(20%) contrast(1.12) brightness(1.15) saturate(1.2) hue-rotate(-5deg);
+  box-shadow: 
+    8px 8px 25px rgba(160, 82, 45, 0.25),
+    0 0 20px rgba(255, 127, 80, 0.2);
+  border-color: var(--coral-intenso);
+}
+
+/* ====================
+   Pie de página cálido
+==================== */
+footer {
+  background: linear-gradient(135deg, 
+    var(--marron-chocolate), 
+    var(--terracota-profundo), 
+    var(--coral-intenso)
+  );
+  color: var(--blanco-arena);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  box-shadow: 
+    0 -6px 20px rgba(160, 82, 45, 0.2),
+    inset 0 2px 5px rgba(250, 240, 230, 0.1);
+}
+
+/* ====================
+   Elementos de texto mediterráneos
+==================== */
+h1, h2, h3 {
+  color: var(--terracota-profundo);
+  font-family: 'Georgia', serif;
+  text-shadow: 0 1px 2px rgba(160, 82, 45, 0.1);
+}
+
+/* Botones con estilo terracota elegante */
+button, .boton {
+  background: linear-gradient(145deg, 
+    var(--coral-suave), 
+    var(--terracota-claro), 
+    var(--coral-empolvado)
+  );
+  color: var(--marron-chocolate);
+  border: 2px solid var(--terracota-profundo);
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 
+    4px 4px 12px rgba(160, 82, 45, 0.2),
+    inset 1px 1px 3px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+button:hover, .boton:hover {
+  background: linear-gradient(145deg, 
+    var(--coral-intenso), 
+    var(--coral-suave), 
+    var(--salmon-desaturado)
+  );
+  transform: translateY(-3px);
+  box-shadow: 
+    6px 6px 18px rgba(160, 82, 45, 0.3),
+    0 0 15px rgba(255, 127, 80, 0.25);
+  border-color: var(--coral-intenso);
+  color: var(--blanco-arena);
+}
+
+/* Efectos especiales mediterráneos */
+@keyframes brillo-mediterraneo {
+  0%, 100% { 
+    box-shadow: 
+      6px 6px 20px rgba(160, 82, 45, 0.15),
+      -2px -2px 10px rgba(255, 255, 255, 0.7);
+  }
+  50% { 
+    box-shadow: 
+      8px 8px 25px rgba(160, 82, 45, 0.2),
+      -3px -3px 12px rgba(255, 255, 255, 0.8);
+  }
+}
+
+.tarjeta:hover {
+  animation: brillo-mediterraneo 2.5s ease-in-out infinite;
+}
+
+/* Acento especial para elementos destacados */
+.destacado {
+  border-left: 4px solid var(--coral-intenso);
+  background: linear-gradient(90deg, 
+    rgba(255, 127, 80, 0.08), 
+    transparent
+  );
+}
+
+/* Efecto atardecer mediterráneo */
+.efecto-atardecer {
+  background: linear-gradient(135deg, 
+    var(--coral-intenso), 
+    var(--terracota-medio), 
+    var(--rosa-arcilla)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

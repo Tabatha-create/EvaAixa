@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🪴 Cerámica con Alma - Nery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <img src="logos/nery1-1.jpg" alt="Logo Nery" class="logo" />
+    <h1 class="logo-visible">🪴 Cerámica con Alma - Nery</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="contenido-hero">
+        <h2>🪴 Cerámica con Alma – Nery</h2>
+        <p>Explora el arte en barro, fuego y manos creativas.</p>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="productos" class="galeria">
+      <h3>Galería de obras</h3>
+      <div class="productos">
+
+      <div class="producto-container">
+        <h4>Tazón artesanal</h4>
+        <div class="producto">
+          <img src="img/florero.jpeg" alt="Tazón artesanal de cerámica" />
+          <p>Hecho a mano con amor</p>
+        </div>
+      </div>
+
+      <div class="producto-container">
+        <h4>Botella jarrón</h4>
+        <div class="producto">
+          <img src="img/botella.jpeg" alt="botella" />
+          <p>Diseño único y elegante</p>
+        </div>
+      </div>
+
+        <div class="producto-container">
+          <h4>Variedad de tazas</h4>
+          <div class="producto">
+            <img src="img/tazas3.jpeg" alt="Juego de tazas hecho a mano" />
+            <p>Perfecto para tu café</p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a href="#" class="btn-ver-mas">Ver más</a>
+    </section>
+
+    <section id="sobre-mi" class="galeria">
+      <h3>Sobre mí</h3>
+      <div class="sobre-mi-contenido"> 
+        <img src="img/nery.jpg" alt="Foto de Nery" class="foto-sobre-mi">
+        <p>Nery es una artista ceramista apasionada por las formas orgánicas, los colores terrosos y el proceso ancestral de moldear la arcilla. Su obra combina tradición y modernidad con una sensibilidad muy personal.</p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <h3>Contacto</h3>
+      <form action="enviar.php" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="boton">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Arte en Cerámica - Nery</p>
+    <p>Esta página forma parte del proyecto familiar: “Galería Creativa”.</p>
+    <p>Síguenos en redes: 💖 📸 📘</p>
+  </footer>
+
+  <button id="btnUp" title="Ir arriba">↑</button>
+  <a href="../index.html" id="btnHome" title="Volver a la página principal">
+  <img src="../img/vgr1.png" alt="Inicio" />
+</a>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+ 

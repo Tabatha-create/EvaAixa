@@ -1,0 +1,75 @@
+ :root {
+  --gris-foto-antigua: #6E6E6E;
+  --lino-canario: #D8CAB8;
+  --arena-tibia: #F5E3C8;
+  --ocre-salado: #C4A484;
+  --azul-salino: #B4CDED;
+  --verde-sombra: #C3D5B2;
+  --coral-envejecido: #E79883;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--lino-canario);
+  color: #4D4D4D;
+}
+
+/* Banner con imagen familiar */
+.banner {
+  background-image: url("ruta/a/tu/foto.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  filter: grayscale(100%);
+}
+.banner .overlay {
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  color: var(--gris-foto-antigua);
+  font-size: 2.5em;
+  padding: 20px;
+}
+
+/* Menú de navegación */
+.menu ul {
+  display: flex;
+  list-style: none;
+  background-color: var(--ocre-salado);
+  margin: 0;
+  padding: 10px 0;
+  justify-content: center;
+}
+.menu li {
+  margin: 0 20px;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.menu a:hover {
+  color: var(--azul-salino);
+}
+
+/* Secciones */
+section {
+  padding: 40px 20px;
+  border-left: 6px solid var(--verde-sombra);
+  background-color: var(--arena-tibia);
+  margin: 40px 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--ocre-salado);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}

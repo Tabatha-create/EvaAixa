@@ -1,0 +1,110 @@
+:root {
+  --sol-cariñoso: #FFD966;
+  --aguamarina-alegre: #7DE1C3;
+  --melocotón-cálido: #FFB48C;
+  --papel-antiguo: #FFF8E7;
+  --verde-abrazo: #AED8A5;
+  --charcoal-historia: #4C4C4C;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--papel-antiguo);
+  color: var(--charcoal-historia);
+  line-height: 1.6;
+}
+
+/* Cabecera con toque cálido */
+.cabecera-comun {
+  background-color: var(--sol-cariñoso);
+  padding: 30px 20px;
+  position: relative;
+  border-bottom: 5px solid var(--melocotón-cálido);
+}
+.header-content p {
+  font-size: 1.7em;
+  text-align: center;
+  margin: 0;
+  color: var(--charcoal-historia);
+  font-weight: bold;
+}
+
+/* Imágenes decorativas como puntos de luz */
+.imagen-decorativa {
+  width: 40px;
+  height: 40px;
+  background-color: var(--aguamarina-alegre);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.5;
+}
+.top-left    { top: 10px; left: 10px; }
+.top-right   { top: 10px; right: 10px; }
+.middle-left { top: 50%; left: 20px; transform: translateY(-50%); }
+.middle-right{ top: 50%; right: 20px; transform: translateY(-50%); }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right{ bottom: 10px; right: 10px; }
+
+/* Navegación luminosa */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: var(--aguamarina-alegre);
+  padding: 12px 0;
+  margin: 0;
+}
+nav li {
+  margin: 0 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--sol-cariñoso);
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 40px;
+  color: var(--melocotón-cálido);
+}
+
+/* Secciones */
+section {
+  background-color: var(--verde-abrazo);
+  margin: 40px 20px;
+  padding: 30px;
+  border-left: 6px solid var(--melocotón-cálido);
+  border-radius: 10px;
+}
+
+/* Tarjetas creativas */
+.tarjeta {
+  background-color: #fff;
+  padding: 20px;
+  border-left: 5px solid var(--aguamarina-alegre);
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+}
+.tarjeta h3 a {
+  color: var(--melocotón-cálido);
+  text-decoration: none;
+}
+.tarjeta h3 a:hover {
+  text-decoration: underline;
+}
+
+/* Footer con cariño */
+footer {
+  background-color: var(--sol-cariñoso);
+  color: var(--charcoal-historia);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 1.2em;
+}
