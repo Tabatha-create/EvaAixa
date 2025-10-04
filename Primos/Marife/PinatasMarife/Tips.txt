@@ -1,0 +1,250 @@
+¡Entendido! Puedes alternar los colores del texto utilizando JavaScript para cambiar el color en intervalos regulares. Aquí tienes un ejemplo de cómo hacerlo:
+
+### HTML y CSS:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto sobre Imagen</title>
+    <style>
+        .container {
+            position: relative;
+            width: 50%;
+        }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .text {
+            position: absolute;
+            bottom: 10px; /* Cambia esta línea según donde quieras el texto */
+            left: 50%;    /* Cambia esta línea según donde quieras el texto */
+            transform: translateX(-50%);
+            color: white; /* Color inicial */
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="tu-imagen.jpg" alt="Imagen" class="image">
+        <div class="text" id="text">Texto sobre la imagen</div>
+    </div>
+
+
+Imágenes
+
+¡Por supuesto! Puedes añadir botones para avanzar y retroceder entre las imágenes. Aquí tienes cómo hacerlo:
+
+### HTML
+Añade los botones dentro del contenedor del banner:
+```html
+<div class="banner">
+    <div class="slide">
+        <img src="imagen1.jpg" alt="Imagen 1">
+    </div>
+    <div class="slide">
+        <img src="imagen2.jpg" alt="Imagen 2">
+    </div>
+    <div class="slide">
+        <img src="imagen3.jpg" alt="Imagen 3">
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+```
+
+### CSS
+Estiliza los botones para que se vean bien en el banner:
+```css
+/* styles.css */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+```
+
+### JavaScript
+Actualiza el script para manejar los botones de navegación:
+```javascript
+// script.js
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // Cambia de imagen cada 3 segundos
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlide);
+});
+```
+
+Con estos cambios, tendrás botones para avanzar y retroceder manualmente entre las imágenes del banner. ¿Hay algo más que te gustaría añadir o modificar?
+
+    <script>
+        const textElement = document.getElementById('text');
+        const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+        let colorIndex = 0;
+
+        function changeColor() {
+            textElement.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        setInterval(changeColor, 1000); // Cambia el color cada segundo
+    </script>
+</body>
+</html>
+```
+
+### Explicación:
+- **HTML y CSS**:
+  - La estructura HTML y CSS es similar a la anterior.
+  - El texto tiene un `id` para que podamos seleccionarlo con JavaScript.
+
+- **JavaScript**:
+  - Se selecciona el elemento de texto usando `document.getElementById`.
+  - Se define un array `colors` con los colores que quieres alternar.
+  - La función `changeColor` cambia el color del texto al siguiente color en el array.
+  - `setInterval` llama a `changeColor` cada segundo (1000 milisegundos).
+
+Puedes ajustar los colores en el array `colors` y el intervalo de tiempo en `setInterval` según tus preferencias. ¿Te gustaría probar con otros colores o necesitas alguna otra modificación?
+
+Origen: Conversación con Copilot 27/8/2024
+(1) github.com. https://github.com/la9una/web/tree/ba1073ae044ebb7b538a3b13f0f9598f7c410bb6/docs%2Fbootstrap%2Falignci.md.
+
+
+ <div class="gallery">
+        <div class="gallery-item">
+            <img src="imagen1.jpg" alt="Imagen 1">
+        </div>
+        <div class="gallery-item">
+            <img src="imagen2.jpg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </div>
+        <!-- Añade más imágenes según sea necesario -->
+    </div>
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+BANNER
+.hero {
+    /* hace que ocupe todo el alto de pantalla */
+    height: 100vh;
+    background: url('../img/backgroun-image.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease;
+}

@@ -1,0 +1,130 @@
+/* Ajustes para el banner */
+.banner {
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.banner img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ajustes para la galería y modal */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: var(--blanco);
+    border: 2px solid var(--verde-manzana);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    padding: 0;
+    border: none;
+}
+
+/* Modal mejorado */
+.modal {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+}
+
+.modal-content {
+    background-color: transparent;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    margin: auto;
+}
+
+.close {
+    color: var(--blanco);
+    background-color: transparent;
+    right: 1rem;
+    top: 1rem;
+}
+
+/* Ajustes para el procedimiento */
+#procedimiento {
+    display: none;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+.pasos {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pasos li {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.pasos li p {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.pasos img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .thumbnail {
+        height: 200px;
+    }
+    
+    .pasos img {
+        height: 200px;
+    }
+    
+    .banner img {
+        height: 200px;
+    }
+}

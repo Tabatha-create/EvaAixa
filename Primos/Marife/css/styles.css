@@ -1,0 +1,448 @@
+/* Estilos para la página web de Marife */
+/* Paleta de colores extraída del logo */
+:root {
+  --rosa: #E94B7E;
+  --naranja: #F07C3E;
+  --amarillo: #FCBB36;
+  --verde: #8BC04F;
+  --turquesa: #00A0A1;
+  --morado: #6D2C7D;
+  --blanco: #FFFFFF;
+  --negro: #333333;
+  --gris-claro: #F5F5F5;
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Estilos para el logo */
+.logo {
+  display: block;
+  max-width: 350px;
+  margin: auto;
+  transform: scale(1.5); /* Aumenta el tamaño del logo en un 20% */
+}
+
+/* Estilos de encabezado */
+header {
+  background: linear-gradient(to right, var(--rosa), var(--naranja), var(--amarillo), var(--verde), var(--turquesa), var(--morado));
+  padding: 1rem;
+  padding-top: 2rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+header h1 {
+  color: var(--blanco);
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar el texto del título cuando se muestra el logo */
+.logo-visible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Animación sutil para el logo */
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo:hover {
+  animation: logoFloat 5s ease-in-out infinite;
+}
+
+/* Navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem 0;
+}
+
+nav ul li {
+  margin: 0 2rem;
+}
+
+nav ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--blanco);
+  color: var(--morado);
+}
+
+/* Sección Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: var(--gris-claro);
+  flex-wrap: wrap;
+}
+
+.contenido-hero {
+  flex: 1;
+  padding-right: 2rem;
+  min-width: 300px;
+}
+
+.hero h2 {
+  color: var(--turquesa);
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.hero p {
+  color: var(--negro);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  min-width: 300px;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  background-color: var(--rosa);
+  color: var(--blanco);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--naranja);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección Galería */
+.galeria {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.galeria h3 {
+  color: var(--morado);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.galeria h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--rosa), var(--naranja));
+}
+
+.productos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Contenedor para cada producto */
+.producto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+/* Título del producto fuera del contenedor */
+.producto-container h4 {
+  color: var(--morado);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.producto {
+  flex: 1;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: var(--gris-claro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 3px solid var(--blanco);
+}
+
+.producto p {
+  color: var(--turquesa);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Botón "Ver más" */
+.btn-ver-mas {
+  display: inline-block;
+  background: linear-gradient(to right, var(--rosa), var(--naranja));
+  color: var(--blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-ver-mas:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, var(--naranja), var(--rosa));
+}
+
+/* Efecto adicional al hacer hover en todo el producto */
+.producto:hover .btn-ver-mas {
+  background: linear-gradient(to right, var(--turquesa), var(--morado));
+}
+
+.sobre-mi-contenido {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.foto-sobre-mi {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.sobre-mi-contenido p {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Versión móvil: imagen arriba, texto abajo */
+@media (max-width: 600px) {
+  .sobre-mi-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-contenido p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Sección de contacto */
+.contacto {
+  background-color: var(--verde);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contacto h3 {
+  color: var(--blanco);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto label {
+  color: var(--morado);
+  font-weight: bold;
+}
+
+.contacto input, 
+.contacto textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--gris-claro);
+  border-radius: 5px;
+}
+
+.contacto input:focus, 
+.contacto textarea:focus {
+  outline: none;
+  border-color: var(--amarillo);
+  box-shadow: 0 0 5px rgba(252, 187, 54, 0.5);
+}
+
+.contacto button {
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--morado);
+  color: var(--blanco);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contenido-hero {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .producto {
+    min-width: 100%;
+  }
+}
+
+#btnUp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  font-size: 24px;
+  background-color: var(--rosa);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* oculto inicialmente */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+#btnUp:hover {
+  background-color:var(--verde); /* color al pasar el mouse */
+}
+
+#btnHome {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#btnHome img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#btnHome:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+  

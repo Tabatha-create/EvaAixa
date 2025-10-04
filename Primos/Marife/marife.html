@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marife y sus primores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Agregamos el logo de Marife -->
+    <img src="img/otrologo.png" alt="Logo Marife" class="logo">
+    <!-- Ocultamos visualmente el título pero lo mantenemos para SEO y accesibilidad -->
+    <h1 class="logo-visible">Marife y sus primores</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="contenido-hero">
+      <h2>Manualidades llenas de color, amor y creatividad</h2>
+      <p>Descubre nuestras piñatas, bisuterías y filigranas hechas a mano.</p>
+    </div>
+  </section>
+
+  <section id="productos" class="galeria">
+  <h3>Destacados</h3>
+  <div class="productos">
+    <div class="producto-container">
+      <h4>Piñatas</h4>
+      <div class="producto">
+        <img src="img/pinata.jpg" alt="Piñata" />
+        <p>Piñatas personalizadas</p>
+        <a href="PinatasMarife/index copy.html" class="btn-ver-mas">Ver más piñatas</a>
+      </div>
+    </div>
+    <div class="producto-container">
+      <h4>Bisutería</h4>
+      <div class="producto">
+        <img src="img/bisuteria.jpg" alt="Bisutería" />
+        <p>Bisutería artesanal</p>
+        <a href="#" class="btn-ver-mas">Ver bisutería</a>
+      </div>
+    </div>
+    <div class="producto-container">
+      <h4>Filigranas</h4>
+      <div class="producto">
+        <img src="img/filigrana.jpg" alt="Filigrana" />
+        <p>Arte e imaginación en filigrana</p>
+        <a href="#" class="btn-ver-mas">Ver filigranas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="sobre-mi" class="galeria">
+    <h3>Sobre mí</h3>
+    <div class="sobre-mi-contenido"> 
+      <img src="img/marife.jpg" alt="Foto de Marife" class="foto-sobre-mi">
+      <p>Marife es una creadora inquieta, apasionada por las manualidades, los colores alegres y la originalidad. Una persona con una sensibilidad muy especial que le da a cada artículo o piñata su toque personal y divertido.</p>
+    </div>
+  </section>
+  
+  <!-- Formulario de contacto -->
+  <section id="contacto" class="contacto">
+    <h3>Contacto</h3>
+    <form action="enviar.php" method="POST">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Correo electrónico:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+
+      <button type="submit" class="boton">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Marife y sus primores</p>
+    <p>Esta página forma parte del proyecto familiar: “Galería Creativa”.</p>
+    <p>Síguenos en redes: 💖 📸 📘</p>
+  </footer>
+
+    <button id="btnUp" title="Ir arriba">↑</button>
+  <a href="../index.html" id="btnHome" title="Volver a la página principal">
+  <img src="../img/vgr1.png" alt="Inicio" />
+</a>
+  <script src="js/script.js"></script>
+
+</body>
+</html>
+ 
