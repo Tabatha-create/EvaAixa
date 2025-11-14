@@ -181,30 +181,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Envío del formulario
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+// Envío del formulario
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(contactForm);
+        const statusMessage = document.getElementById('form-status');
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            // Obtener los valores del formulario
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            console.log('Formulario enviado:', { name, email, subject, message });
-            alert('¡Gracias ' + name + '! Tu mensaje ha sido enviado. Te responderé pronto ♡');
-            
-            // Limpiar el formulario
-            contactForm.reset();
-            
-            // Cerrar el formulario después del envío
-            interactingWithForm = false;
-            setTimeout(() => {
-                closeForm();
-            }, 1000);
-        });
-    }
+            if (response.ok) {
+                if (statusMessage) {
+                    statusMessage.style.display = 'block';
+                    statusMessage.style.color = '#10b981';
+                    statusMessage.textContent = '¡Mensaje enviado con éxito! Te responderé pronto ♡';
+                }
+                contactForm.reset();
+                
+                // Cerrar el formulario después del envío
+                interactingWithForm = false;
+                setTimeout(() => {
+                    closeForm();
+                    if (statusMessage) statusMessage.style.display = 'none';
+                }, 3000);
+            } else {
+                throw new Error('Error al enviar');
+            }
+        } catch (error) {
+            if (statusMessage) {
+                statusMessage.style.display = 'block';
+                statusMessage.style.color = '#ef4444';
+                statusMessage.textContent = 'Hubo un error. Intenta de nuevo.';
+            }
+        }
+    });
+}
 
     // Cerrar formulario al hacer clic fuera (mejorado)
     document.addEventListener('click', function(e) {
