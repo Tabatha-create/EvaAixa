@@ -289,23 +289,33 @@ main {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+    align-items: stretch;
+}
+
+.projects-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: -1rem auto 3rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .project-card {
-    background: rgba(255,255,255,0.9);
-    padding: 2.8rem 2.3rem;
-    border-radius: 28px;
+    background: rgba(255,255,255,0.92);
+    padding: 2rem;
+    border-radius: 24px;
     transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 360px;
+    min-height: 290px;
 }
 
 .project-card:hover {
@@ -325,7 +335,7 @@ main {
 }
 
 .project-card h3 {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     margin-bottom: 1.2rem;
     color: #ef4444;
     line-height: 1.2;
@@ -359,32 +369,34 @@ main {
 ========================= */
 
 .blog-preview {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .blog-post {
-    background: white;
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    padding: 1.8rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-left: 4px solid #ec4899;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-4px);
 }
 
 .blog-post h3 {
     color: #c084fc;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
 }
 
 .blog-post p {
-    color: #666;
-}
-
-.blog-date {
-    color: #999;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -831,8 +843,8 @@ main {
 ========================= */
 
 footer {
-    background: linear-gradient(45deg, #e1bee7 0%, #f3e8ff 100%);
-    padding: 3rem 0;
+    background: linear-gradient(180deg, #fdf4ff 0%, #f9fafb 100%);
+    padding: 4rem 0 3rem;
     text-align: center;
     color: #444;
 }
@@ -840,18 +852,37 @@ footer {
 .footer-content {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
     align-items: center;
 }
 
-.footer-symbol {
-    color: #ec4899;
-    font-size: 1.8rem;
+.footer-line {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, #ec4899, #c084fc);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
 }
 
+.footer-name {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: #ef4444;
+    letter-spacing: 2px;
+}
 .footer-quote {
-    font-style: italic;
     color: #666;
+    font-style: italic;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+.footer-symbol {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: #ec4899;
+    opacity: 0.8;
 }
 
 /* =========================
