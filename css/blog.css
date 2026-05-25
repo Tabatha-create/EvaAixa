@@ -337,11 +337,6 @@ footer {
         text-align: center;
     }
 
-    .logo::before,
-    .logo::after {
-        display: none;
-    }
-
     nav ul {
         justify-content: center;
     }
