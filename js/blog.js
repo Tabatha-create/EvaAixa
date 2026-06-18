@@ -238,3 +238,12 @@ const dynamicCSS = `
 const styleTag = document.createElement("style");
 styleTag.textContent = dynamicCSS;
 document.head.appendChild(styleTag);
+
+document.getElementById('contactForm').addEventListener('submit', function() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+
+    document.getElementById('_replyto').value = email;
+    document.getElementById('_subject').value = `${subject} - de ${name}`;
+});
