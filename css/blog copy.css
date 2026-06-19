@@ -711,155 +711,47 @@ main {
     border-bottom: 12px solid white;
 }
 
-.social-sidebar {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.social-section {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.social-intro {
+    color: #7b7280;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
 }
 
 .social-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    background: linear-gradient(45deg, #e1bee7 0%, #d7b6f9 85%);
-    padding: 15px 8px;
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .social-btn {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(45deg, #ef4444 0%, #ec4899 100%);  /* Color base uniforme */
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.social-btn:hover {
-    background-color: #db2777;  /* Variante al hacer hover */
+    background: white;
+    color: #ef6b7b;
+    border: 2px solid #e9bfd8;
+    box-shadow: 0 4px 10px rgba(0,0,0,.06);
+    transition: all .3s ease;
 }
 
 .social-btn svg {
     width: 20px;
     height: 20px;
-    transition: all 0.3s ease;
 }
 
-/* Efectos hover */
 .social-btn:hover {
-    transform: scale(1.15) translateX(5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.social-btn:hover svg {
-    transform: scale(1.1);
-}
-
-/* Efecto de ondas al hacer hover */
-.social-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: scale(0);
-    transition: transform 0.3s ease;
-}
-
-.social-btn:hover::before {
-    transform: scale(1);
-}
-
-/* Decoración */
-.social-decoration {
-    font-size: 1.5rem;
-    color: #ec4899;
-    opacity: 0.7;
-    animation: float 3s ease-in-out infinite;
-    margin-top: 10px;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-/* Tooltips */
-.social-btn::after {
-    content: attr(aria-label);
-    position: absolute;
-    left: 60px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-4px);
+    background: #ef6b7b;
     color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-family: 'Georgia', serif;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.social-btn:hover::after {
-    opacity: 1;
-    visibility: visible;
-    left: 55px;
-}
-
-/* Responsive - ocultar en móviles pequeños */
-@media (max-width: 768px) {
-    .social-sidebar {
-        left: 10px;
-        transform: translateY(-50%) scale(0.9);
-    }
-    
-    .social-buttons {
-        padding: 12px 6px;
-    }
-    
-    .social-btn {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .social-btn svg {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .social-btn::after {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .social-sidebar {
-        display: none;
-    }
 }
 
 /* =========================
